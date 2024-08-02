@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <!-- 头部 -->
+    <head>
+        <!-- 目前在大部分浏览器中，直接输出中文会出现中文乱码的情况。
+        这时候我们就需要在头部将字符声明为 UTF-8 或 GBK。 -->
+        <meta charset="utf-8">
+        <title>
+            HTML学习笔记
+        </title>
+    </head>
+    <!--只有 <body>区域（白色部分)才会在浏览器中显示。-->
+    <body>
+        <h1>HTML学习笔记</h1>
+        <img src="https://www.runoob.com/images/pulpit.jpg" alt="pulpit" width="304" height="228">
+        <br/><hr/>
+    
+
+        <h1><b>目录:</b></h1><hr/><hr/>
+        <h2><a href="#C1"><b>文本格式化</b></a></h2>
+        <h2><a href="#C2"><b>HTML超链接</b></a></h2>
+        <h2><a href="#C3"><b>头部元素</b></a></h2>
+        <h2><a href="#C4"><b>CSS</b></a></h2>
+        <h2><a href="#C5"><b>图像</b></a></h2>
+        <h2><a href="#C6"><b>&lt;div&gt;和&lt;span&gt;</b></a></h2>
+
+        <hr/>
+        <hr/><br/>
+        <p>请确保将 HTML 标题 标签只用于标题。不要仅仅是为了生成粗体或大号的文本而使用标题。
+            <br/>搜索引擎使用标题为您的网页的结构和内容编制索引。
+            <br/>因为用户可以通过标题来快速浏览您的网页，所以用标题来呈现文档结构是很重要的。
+            <br/>应该将 h1 用作主标题（最重要的），其后是，h2次重要的再其次是 h3，以此类推。
+        </p>
+        
+            <!-- 就是没有关闭标签的空元素（<br> 标签定义换行）。
+        在 XHTML、XML 以及未来版本的 HTML 中，所有元素都必须被关闭。
+        在开始标签中添加斜杠，比如 <br />，是关闭空元素的正确方法，HTML、XHTML 和 XML 都接受这种方式。
+        即使 <br> 在所有浏览器中都是有效的，但使用 <br /> 其实是更长远的保障。 -->
+        
+        <hr/><h2>参考链接</h2>
+        <a href="https://www.runoob.com/html/html-tutorial.html" target="_blank"><b>菜鸟教程</b></a><br/>
+        <a href="https://www.runoob.com/tags/ref-standardattributes.html" target="_blank">属性标准参考手册    
+        </a><br/>
+        
+        <hr/><h2><a id="C1"><b>文本格式化</b></a></h2>
+        <p>HTML 使用标签<!-- <b> --> ("bold") 与 <!-- <i> --> ("italic") 对输出的文本进行格式, 如：<b>粗体</b> or <i>斜体</i>
+            这些HTML标签被称为格式化标签<br/><a href="https://www.runoob.com/html/html-formatting.html" target="_blank"><b>HTML 文本格式化标签</b></a>
+        </p> <br/>
+        
+    
+        <hr/><h2><a id="C2"><b>HTML超链接</b></a></h2>
+        <p>元素具有以下属性:<br/>
+            <b>href</b>：指定链接目标的URL，这是链接的最重要属性。可以是另一个网页的URL、文件的URL或其他资源的URL。<br/>
+            <b>target</b>（可选）：指定链接如何在浏览器中打开。常见的值包括 _blank（在新标签或窗口中打开链接）和 _self（在当前标签或窗口中打开链接）。<br/>
+            <b>title</b>（可选）：提供链接的额外信息，通常在鼠标悬停在链接上时显示为工具提示。<br/>
+            <b>rel</b>（可选）：指定与链接目标的关系，如 nofollow、noopener 等。<br/>
+        </p>
+        
+        <!-- 使用图像作为链接 -->
+        <!-- <a href="https://yiyan.baidu.com/">
+            <img src="example.jpg" alt="实例文件">
+        </a> -->
+        
+        <p>
+            <b>锚点链接</b>：除了链接到其他网页外，还可以在同一页面内创建内部链接，这称为锚点链接。要创建锚点链接，需要在目标位置使用 <a> 元素定义一个标记，并使用#符号引用该标记。<br/>
+            例如：<br/>        
+        </p>
+
+        <hr/><h2><a id="C3"><b>头部元素</b></a></h2>
+
+        <p>
+            <a href="https://www.runoob.com/html/html-head.html" target="_blank">HTML头部教程</a><br/>
+            <b>Head元素</b><br/>
+            <b>head</b>素包含了所有的头部标签元素。在 head元素中你可以插入脚本（scripts）, 样式文件（CSS），及各种meta信息。<br/>
+            可以添加在头部区域的元素标签为: &lt;title&gt;,&lt;style&gt;,&lt;meta&gt;,&lt;link&gt;,&lt;script&gt;,&lt;noscript&gt;,&lt;base&gt;<br/>
+
+            <b>Title元素</b><br/>
+            &lt;title&gt;标签定义了不同文档的标题；在 HTML/XHTML 文档中是必需的；定义了浏览器工具栏的标题
+            当网页添加到收藏夹时，显示在收藏夹中的标题；显示在搜索引擎结果页面的标题<br/>
+
+            <b>base元素</b><br/>
+            &lt;base&gt; 标签描述了基本的链接地址/链接目标，该标签作为HTML文档中所有的链接标签的默认链接。<br/>
+            <b>实例：</b><br/>
+            &lt;head&gt;<br/>
+                &lt;base href="http://www.runoob.com/images/" target="_blank"&gt;<br/>
+            &lt;/head&gt;<br/>
+
+            其他元素用法及实例请见头部链接<br>
+        </p>
+
+        <hr/><h2><b><a id="C4">CSS</a></b></h2>
+        <b><a href="https://www.runoob.com/html/html-css.html" target="_blank">HTML CSS</a></b><br/>
+
+
+        <hr/><h2><b><a id="C5">图像</a></b></h2>
+        <b><a href="https://www.runoob.com/html/html-images.html">HTML 图像</a></b><br/>
+
+        <hr/><h2><b><a id="C6">&lt;div&gt;和&lt;span&gt;</a></b></h2>
+
+        <a href="https://www.runoob.com/html/html-blocks.html"><b>区块div&span</b></a><br/>
+        <a href="https://www.runoob.com/html/html-layouts.html"><b>布局</b></a>
+
+        <p>
+            大多数 HTML 元素被定义为<b>块级元素</b>或<b>内联元素</b>。<br>
+            块级元素在浏览器显示时，通常会以新行来开始（和结束）。<br/>
+            如：&lt;h1&gt;,&lt;p&gt;,&lt;ul&gt;,&lt;table&gt;<br/>
+            内联元素在显示时通常不会以新行开始。<br/>
+            实例: &lt;b&gt;,&lt;td&gt;,&lt;a&gt;,&lt;img&gt;
+        </p>
+
+        <h3><b>&lt;div&gt;</b></h3>
+        
+        <p>
+            &lt;div&gt;元素是块级元素，它可用于组合其他 HTML 元素的容器。<br/>
+            &lt;div&gt; 元素没有特定的含义。除此之外，由于它属于块级元素，浏览器会在其前后显示折行。<br/>            
+            如果与 CSS 一同使用，&lt;div&gt; 元素可用于对大的内容块设置样式属性。<br/>      
+            &lt;div&gt; 元素的另一个常见的用途是文档布局。它取代了使用表格定义布局的老式方法。<br/>
+
+
+            <!-- 当涉及到 <div> 和 <span> 的区别时，以下几点是值得进一步明确的：
+
+                块级元素 vs. 行内元素：
+                
+                <div> 是块级元素，它独占一行，可以设置宽度、高度以及边距等样式属性。它适合用于创建页面的大块结构，例如页面的主体区域、容器、布局等。
+                <span> 是行内元素，它不会独占一行，宽度默认由其内容决定。它适合用于对文本或其他行内元素进行样式化、标记或包裹。
+                默认样式和布局：
+                
+                <div> 元素的默认样式为块级显示，会以块的形式占据可用空间。
+                <span> 元素的默认样式为行内显示，它不会独占一行，只占据其内容的宽度。
+                嵌套关系：
+                
+                <div> 可以容纳其他块级元素和行内元素，包括其他的 <div> 和 <span> 元素。
+                <span> 通常被用来包裹文本或其他行内元素，比如用来设置特定文本的样式。
+                总之，<div> 用于创建页面结构和布局，而 <span> 用于对文本或行内元素进行样式化或包裹。它们在页面设计和样式设置中有不同的用途和作用。 -->
+        </p>
+
+        <h3><b>&lt;span&gt;</b></h3>
+        <p>
+
+        </p>
+
+
+            
+    </body>
+</html>
